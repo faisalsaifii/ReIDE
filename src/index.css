@@ -3,9 +3,16 @@
 body {
   margin: 0;
   font-family: Roboto;
+  height: 100dvh;
 }
 
 * {
   color: #fff;
   background-color: #000;
+  font-size: 14px;
+}
+
+#root {
+  display: flex;
+  height: 100%;
 }

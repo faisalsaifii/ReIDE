@@ -1,0 +1,23 @@
+.left {
+  width: 70%;
+  margin-right: 3px;
+}
+
+.right {
+  width: 29%;
+}
+
+.code-box {
+  height: 99%;
+  width: 99%;
+}
+
+.input-box {
+  height: 46%;
+  width: 99%;
+}
+
+.output-box {
+  height: 48%;
+  width: 99%;
+}
