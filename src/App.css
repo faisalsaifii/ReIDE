@@ -1,10 +1,16 @@
 .left {
   width: 70%;
-  margin-right: 3px;
+  margin-right: 1px;
 }
 
 .right {
   width: 29%;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
 }
 
 .code-box {
@@ -20,4 +26,27 @@
 .output-box {
   height: 48%;
   width: 99%;
+}
+
+.top {
+  display: flex;
+}
+
+.nav-btn {
+  width: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+
+  .container {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 99%;
+  }
+
+  .right {
+    width: 99dvw;
+  }
 }
