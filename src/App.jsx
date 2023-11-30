@@ -56,6 +56,14 @@ const App = () => {
     }
   }
 
+  const handleTabInput = (e) => {
+    if (e.keyCode == 9) {
+      e.preventDefault();
+      setCode(code + '\t')
+      return false;
+    }
+  }
+
   return (
     <>
       <div className='top'>
@@ -66,7 +74,7 @@ const App = () => {
       <div className='container'>
         {
           showCodeWindow && (<div className='left'>
-            <textarea name='input' className='code-box' value={code} onChange={e => setCode(e.target.value)} placeholder='Code here' />
+            <textarea name='input' className='code-box' value={code} onChange={e => setCode(e.target.value)} placeholder='Code here' onKeyDown={e => handleTabInput(e)} />
           </div>)
         }
 
