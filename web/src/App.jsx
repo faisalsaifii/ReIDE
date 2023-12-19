@@ -1,12 +1,8 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import './App.css'
-import { inject } from '@vercel/analytics';
-import { injectSpeedInsights } from '@vercel/speed-insights';
 
 const App = () => {
-  inject();
-  injectSpeedInsights();
 
   const [showCodeWindow, setShowCodeWindow] = useState(true)
   const [showInputWindow, setShowInputWindow] = useState(true)
