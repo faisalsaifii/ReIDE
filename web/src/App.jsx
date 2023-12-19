@@ -1,8 +1,11 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import './App.css'
+import { inject } from '@vercel/analytics';
 
 const App = () => {
+  inject();
+
   const [showCodeWindow, setShowCodeWindow] = useState(true)
   const [showInputWindow, setShowInputWindow] = useState(true)
   const [showOutputWindow, setShowOutputWindow] = useState(true)
@@ -74,7 +77,7 @@ const App = () => {
       <div className='container'>
         {
           showCodeWindow && (<div className='left'>
-            <textarea  name='input' className='code-box' value={code} onChange={e => setCode(e.target.value)} placeholder='Code here' onKeyDown={e => handleTabInput(e)} />
+            <textarea name='input' className='code-box' value={code} onChange={e => setCode(e.target.value)} placeholder='Code here' onKeyDown={e => handleTabInput(e)} />
           </div>)
         }
 
