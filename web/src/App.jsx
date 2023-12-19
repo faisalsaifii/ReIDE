@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import './App.css'
 import { inject } from '@vercel/analytics';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const App = () => {
   inject();
@@ -80,16 +81,13 @@ const App = () => {
             <textarea name='input' className='code-box' value={code} onChange={e => setCode(e.target.value)} placeholder='Code here' onKeyDown={e => handleTabInput(e)} />
           </div>)
         }
-
         <div className='right'>
-
           {
             showOutputWindow && (<textarea name='output' className='output-box' value={output} onChange={e => setOutput(e.target.value)} placeholder='Output' />)
           }
           {
             showInputWindow && (<textarea name='input' className='input-box' value={input} onChange={e => setInput(e.target.value)} placeholder='Input' />)
           }
-
           <div>
             <select onChange={e => setLanguageId(e.target.value)} value={languageId}>
               <option value='71'>Python</option>
@@ -98,13 +96,10 @@ const App = () => {
               <option value='62'>Java</option>
             </select>
             <button onClick={handleSubmit}>Run</button>
-
           </div>
-
         </div>
       </div>
-
-
+      <SpeedInsights />
     </>
   )
 }
