@@ -2,10 +2,11 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import './App.css'
 import { inject } from '@vercel/analytics';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { injectSpeedInsights } from '@vercel/speed-insights';
 
 const App = () => {
   inject();
+  injectSpeedInsights();
 
   const [showCodeWindow, setShowCodeWindow] = useState(true)
   const [showInputWindow, setShowInputWindow] = useState(true)
@@ -99,7 +100,6 @@ const App = () => {
           </div>
         </div>
       </div>
-      <SpeedInsights />
     </>
   )
 }
