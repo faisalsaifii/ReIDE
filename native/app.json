@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "ReIDE",
+    "slug": "reide",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/reide.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/reide.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/reide.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.faisalsaifi.reide"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b9ba05c7-cbf4-41ad-a058-1be2dbe72e5b"
+      }
+    },
+    "owner": "faisalsaifi"
+  }
+}

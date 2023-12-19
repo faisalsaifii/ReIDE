@@ -74,7 +74,7 @@ const App = () => {
       <div className='container'>
         {
           showCodeWindow && (<div className='left'>
-            <textarea name='input' className='code-box' value={code} onChange={e => setCode(e.target.value)} placeholder='Code here' onKeyDown={e => handleTabInput(e)} />
+            <textarea  name='input' className='code-box' value={code} onChange={e => setCode(e.target.value)} placeholder='Code here' onKeyDown={e => handleTabInput(e)} />
           </div>)
         }
 
